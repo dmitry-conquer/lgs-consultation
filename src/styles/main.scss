@@ -1,8 +1,12 @@
 @use "helpers" as *;
-@use "reset";
+// @use "reset";
 @use "components" as *;
 
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
+html {
+  font-size: 16px;
+}
 
 .lgs-main {
   --primary-color: #f2d879;
@@ -13,7 +17,6 @@
   max-width: rem(1436);
   margin: 0 auto;
   padding: 0 rem(16);
-  
 }
 .lgs-button {
   color: #000;
@@ -27,6 +30,8 @@
   transition: opacity 0.3s ease;
   @include hover {
     opacity: 0.8;
+    color: #000;
+    text-decoration: none;
   }
 }
 
@@ -41,4 +46,60 @@
 
 .lgs-section {
   padding-block: fluid(40, 80);
+}
+
+.l-faq__container {
+  padding-block: clamp(2.5rem, 1.5859rem + 3.9vw, 5rem) !important;
+  position: relative;
+}
+.l-faq__bg {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  left: 0;
+  pointer-events: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+.l-faq__bg span {
+  aspect-ratio: 1/1;
+  background-color: #d9d9d92d;
+  border-radius: 50%;
+}
+.l-faq__list {
+  display: grid;
+  gap: 2.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+}
+.l-faq__item h3 {
+  color: #333;
+  font-size: clamp(1.125rem, 1.0781rem + 0.2vw, 1.25rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+.l-faq__item p {
+  color: #333;
+  font-size: clamp(1rem, 0.9531rem + 0.2vw, 1.125rem);
+  line-height: 1.5;
+}
+
+.lgs-faq-bg {
+  left: 50% !important;
+  top: 56% !important;
+  transform: translateY(-50%) translateX(-50%) !important;
+  width: 105% !important;
+
+  @include medium {
+    display: none;
+  }
+}
+
+.lgs-faq-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  @include small {
+    grid-template-columns: 1fr;
+  }
 }

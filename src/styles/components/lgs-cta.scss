@@ -1,0 +1,30 @@
+@use "../helpers" as *;
+
+.lgs-cta {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    row-gap: rem(20);
+    align-items: center;
+  }
+
+  &__title {
+    color: #fff !important;
+    text-align: center !important;
+    font-size: fluid(26, 32);
+    font-weight: 700;
+    line-height: 1.4;
+    margin-bottom: 0 !important;
+  }
+
+  &__text {
+    color: #fff;
+    text-align: center;
+    font-size: rem(18);
+    line-height: 1.5;
+  }
+}

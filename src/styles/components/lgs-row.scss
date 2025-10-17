@@ -1,0 +1,69 @@
+@use "../helpers" as *;
+
+.lgs-row {
+  &__container {
+    padding-block: rem(24) !important;
+    border-top: 1px dashed rgba(0, 0, 0, 0.15);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.15);
+    display: flex;
+    align-items: center;
+    gap: rem(40);
+
+    @include medium {
+      flex-direction: column;
+    }
+  }
+
+  &__content {
+    flex: 0 1 rem(650);
+    @include medium {
+      flex: 0 1 auto;
+    }
+
+    p,
+    li {
+      color: #333;
+      font-size: fluid(16, 18);
+      line-height: 1.5;
+    }
+
+    p {
+      margin-bottom: rem(8);
+    }
+    ul {
+      padding-left: rem(32) !important;
+    }
+
+    li {
+      list-style-type: disc;
+      list-style-position: outside;
+
+      &:not(:last-child) {
+        margin-bottom: rem(8);
+      }
+
+      &::marker {
+        font-size: rem(11);
+      }
+    }
+  }
+
+  &__title {
+    margin-bottom: rem(20) !important;
+    text-align: left !important;
+  }
+
+  &__image {
+    flex: 0 1 rem(711);
+
+    @include medium {
+      flex: 0 1 auto;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
