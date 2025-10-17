@@ -1,0 +1,29 @@
+@use "../helpers" as *;
+
+.lgs-hero {
+  padding: fluid(60, 325) 0 fluid(60, 190) 0;
+
+  &__container {
+  }
+
+  &__content {
+    max-width: rem(870);
+  }
+
+  &__title {
+    color: #fff;
+    font-size: fluid(40, 60);
+    font-weight: 500;
+    line-height: 1.4;
+    text-transform: uppercase;
+    margin-bottom: rem(18);
+  }
+
+  &__description {
+    color: #fff;
+    font-size: fluid(20, 30);
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: fluid(40, 60);
+  }
+}

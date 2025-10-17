@@ -1,0 +1,60 @@
+@use "../helpers" as *;
+
+.lgs-steps {
+  &__container {
+  }
+
+  &__header {
+    padding-block: rem(24);
+    border-top: 1px dashed rgba(0, 0, 0, 0.1);
+    border-bottom: 1px dashed rgba(0, 0, 0, 0.1);
+    margin-bottom: fluid(32, 40);
+  }
+
+  &__title {
+    margin-bottom: rem(20) !important;
+    font-size: fluid(26, 32) !important;
+  }
+
+  &__description {
+    color: #333;
+    text-align: center;
+    font-size: rem(18);
+    line-height: 1.5;
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: rem(10);
+    max-width: rem(1025);
+    margin: 0 auto;
+
+    @include small {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    background-color: #333;
+    padding: rem(24);
+    display: flex;
+    flex-direction: column;
+    row-gap: fluid(24, 40);
+  }
+
+  &__item-number {
+    color: #fff;
+    font-size: fluid(20, 24);
+    font-weight: 700;
+    line-height: 1.4;
+    padding: rem(8) 0 rem(12) 0;
+    border-bottom: 2px solid var(--primary-color);
+  }
+
+  &__item-description {
+    color: #fff;
+    font-size: rem(18);
+    line-height: 1.5;
+  }
+}
