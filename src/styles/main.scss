@@ -27,11 +27,12 @@ html {
   text-transform: uppercase;
   padding: rem(12) rem(24);
   background-color: var(--primary-color);
-  transition: opacity 0.3s ease;
-  @include hover {
-    opacity: 0.8;
+  transition: background-color 0.3s ease;
+  &:hover {
+    opacity: 1;
     color: #000;
-    text-decoration: none;
+    text-decoration: unset !important;
+    background-color: rgb(230, 193, 61);
   }
 }
 
